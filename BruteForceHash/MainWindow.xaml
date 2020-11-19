@@ -20,7 +20,7 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="1">
             <Label Content="Zu brechender Hash:" />
-            <TextBox x:Name="txtHashEingabe"  Height="23"  TextWrapping="Wrap" Text="Hier hash eingeben"/>
+            <TextBox x:Name="txtHashEingabe" TextWrapping="Wrap" Text="Hier hash eingeben"/>
 
         </StackPanel>
         <Button x:Name="btnBrechen" Grid.Column="1" Grid.Row="1" Content="Breche" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBrechen_Click"/>
