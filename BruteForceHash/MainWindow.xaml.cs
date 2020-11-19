@@ -38,6 +38,7 @@ namespace BruteForceHash
             for (int i = 0; i < 62; i++)
             {
                 rekursivThing(i);
+                ausgabee = hashAString(ausgabe);
                 if (ausgabee == eingabe)
                 {
                     txtAusgabe.Text = ausgabe;
@@ -64,11 +65,10 @@ namespace BruteForceHash
                 increment += 29;
                 c = (char)increment;
             }
-            ausgabe = c.ToString();
-            ausgabee = hashAString(ausgabe);
+            ausgabe = c.ToString();            
         }
 
-        private void rekursivThing(string thing)
+        private void rekursivThing(int increment,int step)
         {
 
         }
