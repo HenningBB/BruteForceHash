@@ -10,7 +10,6 @@ namespace BruteForceHash
     public partial class MainWindow : Window
     {
         string eingabe = "";
-        string pruf = "1";
         string ausgabe = "";
         string ausgabeHash = "";
         bool broken = false;
