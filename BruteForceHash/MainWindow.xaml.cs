@@ -37,7 +37,7 @@ namespace BruteForceHash
         {
             for (int i = 0; i < 62; i++)
             {
-                rekursivThing(i);
+                ausgabe = intToChar(i).ToString();
                 ausgabeHash = hashAString(ausgabe);
                 if (ausgabeHash == eingabe)
                 {
@@ -46,8 +46,7 @@ namespace BruteForceHash
             }
         }
 
-        #region rekursion
-        private void rekursivThing(int increment)
+        private char intToChar(int increment)
         {
             char c;
             if (increment < 10)
@@ -65,14 +64,8 @@ namespace BruteForceHash
                 increment += 29;
                 c = (char)increment;
             }
-            ausgabe = c.ToString();            
+            return c;            
         }
-
-        private void rekursivThing(int increment,int step)
-        {
-
-        }
-        #endregion
 
         #region Warnsholtscher Hashingprozess
         private string hashAString(string stringToHash)
