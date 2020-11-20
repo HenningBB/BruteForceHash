@@ -21,13 +21,40 @@
                     Grid.Column="1">
             <Label Content="Zu brechender Hash:" />
             <TextBox x:Name="txtHashEingabe" TextWrapping="Wrap" Text="Hier hash eingeben"/>
-
+            <ComboBox x:Name="cmbLength">
+                <ComboBoxItem IsSelected="True">
+                    <Label Content="1"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <Label Content="2"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <Label Content="3"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <Label Content="4"/>
+                </ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <Button x:Name="btnBrechen" Grid.Column="1" Grid.Row="1" Content="Breche" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBrechen_Click"/>
         <StackPanel Grid.Row="2"
                     Grid.Column="1">
             <Label Content="Inhalt vom angegebenen Hash:" />
             <TextBox x:Name="txtAusgabe"  Height="23"  TextWrapping="Wrap" Text="" IsEnabled="False"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="2">
+            <Label Content="Zu testender Hash:" />
+            <TextBox x:Name="txtHashEingabeTest" TextWrapping="Wrap" Text="Hier hash eingeben"/>
+
+        </StackPanel>
+        <Button x:Name="btnBrechenTest" Grid.Column="2" Grid.Row="1" Content="Teste" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBrechenTest_Click"/>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="2">
+            <Label Content="Inhalt vom angegebenen Hash:" />
+            <TextBox x:Name="txtAusgabe2"  TextWrapping="Wrap" Text="" />
 
         </StackPanel>
     </Grid>
