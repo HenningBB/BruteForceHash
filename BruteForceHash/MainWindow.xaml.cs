@@ -12,7 +12,7 @@ namespace BruteForceHash
         string eingabe = "";
         string pruf = "1";
         string ausgabe = "";
-        string ausgabee = "";
+        string ausgabeHash = "";
 
 
         public MainWindow()
@@ -38,8 +38,8 @@ namespace BruteForceHash
             for (int i = 0; i < 62; i++)
             {
                 rekursivThing(i);
-                ausgabee = hashAString(ausgabe);
-                if (ausgabee == eingabe)
+                ausgabeHash = hashAString(ausgabe);
+                if (ausgabeHash == eingabe)
                 {
                     txtAusgabe.Text = ausgabe;
                 }
