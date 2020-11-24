@@ -21,6 +21,8 @@ namespace BruteForceHash
             InitializeComponent();
         }
 
+
+
         private void btnBrechen_Click(object sender, RoutedEventArgs e)
         {
             eingabe = txtHashEingabe.Text;
@@ -33,7 +35,16 @@ namespace BruteForceHash
                 txtAusgabe.Text = "Berechne!";
                 ausgabe = "";
                 broken = false;
-                rekursion(cmbLength.SelectedIndex+1, 1);
+                lengthOfRekursion(1);
+            }
+        }
+
+        private void lengthOfRekursion(int length)
+        {
+            rekursion(length, 1);
+            if (!broken && length < 4)
+            {
+                lengthOfRekursion(length + 1);
             }
         }
 
